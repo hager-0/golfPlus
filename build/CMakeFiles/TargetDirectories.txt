@@ -1,0 +1,8 @@
+/home/q/texi/build/CMakeFiles/edit_cache.dir
+/home/q/texi/build/CMakeFiles/rebuild_cache.dir
+/home/q/texi/build/driver/CMakeFiles/driver_ir.dir
+/home/q/texi/build/driver/CMakeFiles/edit_cache.dir
+/home/q/texi/build/driver/CMakeFiles/rebuild_cache.dir
+/home/q/texi/build/logic/CMakeFiles/ir_event.dir
+/home/q/texi/build/logic/CMakeFiles/edit_cache.dir
+/home/q/texi/build/logic/CMakeFiles/rebuild_cache.dir

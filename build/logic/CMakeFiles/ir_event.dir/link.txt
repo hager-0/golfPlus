@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/ir_event.dir/link.d CMakeFiles/ir_event.dir/src/ir_event_main.c.o -o ir_event  ../driver/libdriver_ir.a -lgpiod
