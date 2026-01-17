@@ -1,6 +1,6 @@
 logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o: \
- /home/q/texi/logic/src/ir_event_main.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
+ /home/q/project/golfPlus/logic/src/ir_event_main.c \
+ /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -95,4 +95,4 @@ logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/aarch64-linux-gnu/bits/sigthread.h \
  /usr/include/aarch64-linux-gnu/bits/signal_ext.h \
- /home/q/texi/driver/include/ir_sensor.h
+ /home/q/project/golfPlus/driver/include/ir_sensor.h

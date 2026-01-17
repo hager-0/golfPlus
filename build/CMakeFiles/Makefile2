@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/q/texi
+CMAKE_SOURCE_DIR = /home/q/project/golfPlus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/q/texi/build
+CMAKE_BINARY_DIR = /home/q/project/golfPlus/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -127,14 +127,14 @@ logic/clean: logic/CMakeFiles/ir_event.dir/clean
 driver/CMakeFiles/driver_ir.dir/all:
 	$(MAKE) $(MAKESILENT) -f driver/CMakeFiles/driver_ir.dir/build.make driver/CMakeFiles/driver_ir.dir/depend
 	$(MAKE) $(MAKESILENT) -f driver/CMakeFiles/driver_ir.dir/build.make driver/CMakeFiles/driver_ir.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/texi/build/CMakeFiles --progress-num=1,2 "Built target driver_ir"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/project/golfPlus/build/CMakeFiles --progress-num=1,2 "Built target driver_ir"
 .PHONY : driver/CMakeFiles/driver_ir.dir/all
 
 # Build rule for subdir invocation for target.
 driver/CMakeFiles/driver_ir.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/texi/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/project/golfPlus/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 driver/CMakeFiles/driver_ir.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/texi/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/project/golfPlus/build/CMakeFiles 0
 .PHONY : driver/CMakeFiles/driver_ir.dir/rule
 
 # Convenience name for target.
@@ -144,7 +144,7 @@ driver_ir: driver/CMakeFiles/driver_ir.dir/rule
 # codegen rule for target.
 driver/CMakeFiles/driver_ir.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f driver/CMakeFiles/driver_ir.dir/build.make driver/CMakeFiles/driver_ir.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/texi/build/CMakeFiles --progress-num=1,2 "Finished codegen for target driver_ir"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/project/golfPlus/build/CMakeFiles --progress-num=1,2 "Finished codegen for target driver_ir"
 .PHONY : driver/CMakeFiles/driver_ir.dir/codegen
 
 # clean rule for target.
@@ -159,14 +159,14 @@ driver/CMakeFiles/driver_ir.dir/clean:
 logic/CMakeFiles/ir_event.dir/all: driver/CMakeFiles/driver_ir.dir/all
 	$(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/depend
 	$(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/texi/build/CMakeFiles --progress-num=3,4 "Built target ir_event"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/project/golfPlus/build/CMakeFiles --progress-num=3,4 "Built target ir_event"
 .PHONY : logic/CMakeFiles/ir_event.dir/all
 
 # Build rule for subdir invocation for target.
 logic/CMakeFiles/ir_event.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/texi/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/project/golfPlus/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/CMakeFiles/ir_event.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/texi/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/project/golfPlus/build/CMakeFiles 0
 .PHONY : logic/CMakeFiles/ir_event.dir/rule
 
 # Convenience name for target.
@@ -176,7 +176,7 @@ ir_event: logic/CMakeFiles/ir_event.dir/rule
 # codegen rule for target.
 logic/CMakeFiles/ir_event.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/texi/build/CMakeFiles --progress-num=3,4 "Finished codegen for target ir_event"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/q/project/golfPlus/build/CMakeFiles --progress-num=3,4 "Finished codegen for target ir_event"
 .PHONY : logic/CMakeFiles/ir_event.dir/codegen
 
 # clean rule for target.

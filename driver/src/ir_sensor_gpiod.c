@@ -6,6 +6,17 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
+#include <signal.h>
+
+static volatile sig_atomic_t g_shutdown_requested = 0;
+
+void ir_sensor_request_shutdown(void) {
+    g_shutdown_requested = 1;
+}
+
+bool ir_sensor_shutdown_requested(void) {
+    return g_shutdown_requested != 0;
+}
 
 struct IrSensor {
     struct gpiod_chip* chip;
@@ -96,6 +107,10 @@ bool ir_sensor_wait_change(IrSensor* s, bool* detected_out, int* raw_out) {
 
     while (1) {
         int ret = gpiod_line_event_wait(s->line, NULL); // wait forever
+        if (g_shutdown_requested) {
+            errno = EINTR;
+            return false;
+        }
         if (ret < 0) {
             perror("gpiod_line_event_wait");
             return false;

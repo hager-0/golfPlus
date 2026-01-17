@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/q/texi
+CMAKE_SOURCE_DIR = /home/q/project/golfPlus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/q/texi/build
+CMAKE_BINARY_DIR = /home/q/project/golfPlus/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/q/texi/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/q/texi/build/CMakeFiles /home/q/texi/build/logic//CMakeFiles/progress.marks
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/texi/build/CMakeFiles 0
+	cd /home/q/project/golfPlus/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/q/project/golfPlus/build/CMakeFiles /home/q/project/golfPlus/build/logic//CMakeFiles/progress.marks
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/q/project/golfPlus/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/clean
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/preinstall
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/preinstall
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/q/texi/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/q/project/golfPlus/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 logic/CMakeFiles/ir_event.dir/rule:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/CMakeFiles/ir_event.dir/rule
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logic/CMakeFiles/ir_event.dir/rule
 .PHONY : logic/CMakeFiles/ir_event.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ ir_event: logic/CMakeFiles/ir_event.dir/rule
 
 # fast build rule for target.
 ir_event/fast:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/build
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/build
 .PHONY : ir_event/fast
 
 src/ir_event_main.o: src/ir_event_main.c.o
@@ -135,7 +135,7 @@ src/ir_event_main.o: src/ir_event_main.c.o
 
 # target to build an object file
 src/ir_event_main.c.o:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o
 .PHONY : src/ir_event_main.c.o
 
 src/ir_event_main.i: src/ir_event_main.c.i
@@ -143,7 +143,7 @@ src/ir_event_main.i: src/ir_event_main.c.i
 
 # target to preprocess a source file
 src/ir_event_main.c.i:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.i
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.i
 .PHONY : src/ir_event_main.c.i
 
 src/ir_event_main.s: src/ir_event_main.c.s
@@ -151,7 +151,7 @@ src/ir_event_main.s: src/ir_event_main.c.s
 
 # target to generate assembly for a file
 src/ir_event_main.c.s:
-	cd /home/q/texi/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.s
+	cd /home/q/project/golfPlus/build && $(MAKE) $(MAKESILENT) -f logic/CMakeFiles/ir_event.dir/build.make logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.s
 .PHONY : src/ir_event_main.c.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/q/texi/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/q/project/golfPlus/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

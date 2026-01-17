@@ -21,15 +21,35 @@ class IRReaderThread(QThread):
                 text=True,
                 bufsize=1
             )
-            for line in self.proc.stdout:
+
+            # Read lines until interruption is requested or process ends
+            while not self.isInterruptionRequested():
+                line = self.proc.stdout.readline() if self.proc.stdout else ""
                 if line:
                     self.lineReceived.emit(line.strip())
+                else:
+                    if self.proc.poll() is not None:
+                        break
+
         except Exception as e:
             self.lineReceived.emit(f"ERROR: {e}")
+        finally:
+            self._terminate_process()
+
+    def _terminate_process(self):
+        if self.proc and self.proc.poll() is None:
+            try:
+                self.proc.terminate()
+                self.proc.wait(timeout=1.0)
+            except Exception:
+                try:
+                    self.proc.kill()
+                except Exception:
+                    pass
 
     def stop(self):
-        if self.proc and self.proc.poll() is None:
-            self.proc.terminate()
+        self.requestInterruption()
+        self._terminate_process()
 
 
 class Backend(QObject):
@@ -40,15 +60,13 @@ class Backend(QObject):
         super().__init__()
         self._detected = False
         self._status_text = "Status: starting..."
+        self.reader = None
 
-        # ---- Config (???? ??????? ??? ??????) ----
         chip = os.getenv("IR_CHIP", "gpiochip0")
         line = os.getenv("IR_LINE", "17")
         active_low = os.getenv("IR_ACTIVE_LOW", "1")
         debounce_ms = os.getenv("IR_DEBOUNCE_MS", "50")
 
-        # ???? ir_event (????? ?? ????? ?????)
-        # ????? UI ?? ~/texi/ui ? ir_event ?? ~/texi/build/logic/ir_event
         base = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
         exe = os.path.join(base, "build", "logic", "ir_event")
 
@@ -56,6 +74,7 @@ class Backend(QObject):
         self.statusTextChanged.emit()
 
         cmd = [exe, "--chip", chip, "--line", line, "--active-low", active_low, "--debounce-ms", debounce_ms]
+
         self.reader = IRReaderThread(cmd, cwd=base)
         self.reader.lineReceived.connect(self.on_line)
         self.reader.start()
@@ -74,19 +93,17 @@ class Backend(QObject):
     def getStatusText(self) -> str:
         return self._status_text
 
+    statusText = Property(str, getStatusText, notify=statusTextChanged)
+
     def setStatusText(self, text: str):
         if self._status_text == text:
             return
         self._status_text = text
         self.statusTextChanged.emit()
 
-    statusText = Property(str, getStatusText, notify=statusTextChanged)
-
     def on_line(self, line: str):
-        # ???? ??? ??? ?????
         self.setStatusText(line)
 
-        # ??? strings ???? ir_event ???????
         if "OBJECT DETECTED" in line:
             self.setDetected(True)
         elif "NO OBJECT" in line:
@@ -96,4 +113,5 @@ class Backend(QObject):
         if self.reader:
             self.reader.stop()
             self.reader.quit()
-            self.reader.wait(1000)
+            self.reader.wait(2000)
+            self.reader = None

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/q/texi/driver/include
+C_INCLUDES = -I/home/q/project/golfPlus/driver/include
 
 C_FLAGS = -std=gnu11 -Wall -Wextra -Wpedantic -O2
 

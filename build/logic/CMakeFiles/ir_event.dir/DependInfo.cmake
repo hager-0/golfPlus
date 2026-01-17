@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/q/texi/logic/src/ir_event_main.c" "logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o" "gcc" "logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o.d"
+  "/home/q/project/golfPlus/logic/src/ir_event_main.c" "logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o" "gcc" "logic/CMakeFiles/ir_event.dir/src/ir_event_main.c.o.d"
   "" "logic/ir_event" "gcc" "logic/CMakeFiles/ir_event.dir/link.d"
   )
 

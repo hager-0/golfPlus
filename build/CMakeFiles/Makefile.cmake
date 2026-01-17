@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/q/texi/CMakeLists.txt"
+  "/home/q/project/golfPlus/CMakeLists.txt"
   "CMakeFiles/3.31.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeSystem.cmake"
-  "/home/q/texi/driver/CMakeLists.txt"
-  "/home/q/texi/logic/CMakeLists.txt"
+  "/home/q/project/golfPlus/driver/CMakeLists.txt"
+  "/home/q/project/golfPlus/logic/CMakeLists.txt"
   "/usr/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.31/Modules/CMakeCInformation.cmake"

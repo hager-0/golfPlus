@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/q/texi/driver/src/ir_sensor_gpiod.c" "driver/CMakeFiles/driver_ir.dir/src/ir_sensor_gpiod.c.o" "gcc" "driver/CMakeFiles/driver_ir.dir/src/ir_sensor_gpiod.c.o.d"
+  "/home/q/project/golfPlus/driver/src/ir_sensor_gpiod.c" "driver/CMakeFiles/driver_ir.dir/src/ir_sensor_gpiod.c.o" "gcc" "driver/CMakeFiles/driver_ir.dir/src/ir_sensor_gpiod.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
