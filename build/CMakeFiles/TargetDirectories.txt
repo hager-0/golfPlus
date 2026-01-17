@@ -1,8 +1,0 @@
-/home/q/project/golfPlus/build/CMakeFiles/edit_cache.dir
-/home/q/project/golfPlus/build/CMakeFiles/rebuild_cache.dir
-/home/q/project/golfPlus/build/driver/CMakeFiles/driver_ir.dir
-/home/q/project/golfPlus/build/driver/CMakeFiles/edit_cache.dir
-/home/q/project/golfPlus/build/driver/CMakeFiles/rebuild_cache.dir
-/home/q/project/golfPlus/build/logic/CMakeFiles/ir_event.dir
-/home/q/project/golfPlus/build/logic/CMakeFiles/edit_cache.dir
-/home/q/project/golfPlus/build/logic/CMakeFiles/rebuild_cache.dir

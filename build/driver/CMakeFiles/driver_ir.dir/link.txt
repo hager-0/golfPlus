@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdriver_ir.a CMakeFiles/driver_ir.dir/src/ir_sensor_gpiod.c.o
-/usr/bin/ranlib libdriver_ir.a
