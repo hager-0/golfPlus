@@ -144,9 +144,3 @@ Qt apps need a display server. Options:
 - Run on the Pi with a monitor (local desktop),
 - SSH with X11 forwarding: `ssh -X user@pi`, or
 - Use VNC / remote desktop.
-
-Next steps (optional improvements)
-----------------------------------
-- Replace stdout parsing with a proper IPC (UNIX domain sockets) for bidirectional control (e.g., lock control).
-- Add systemd services for automatic startup.
-- Add a mock provider for development on PC without hardware.
